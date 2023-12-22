@@ -2,7 +2,11 @@
   "name": "netc-business-plugin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "netcBusinessPlugin.cjs",
+  "module": "netcBusinessPlugin.esm.js",
+  "browser": "netcBusinessPlugin.umd.js",
+  "iife": "netcBusinessPlugin.min.js",
+  "umd": "netcBusinessPlugin",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +16,15 @@
   ],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "js-md5": "^0.8.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "rollup": "^4.9.1"
   }
